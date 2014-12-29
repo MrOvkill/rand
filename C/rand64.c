@@ -11,8 +11,9 @@ rand64_t rand64_init(long long seed)
 
 long long rand64_range(rand64_t* rand, long long min, long long max)
 {
-    rand->seed = (rand->seed * 125L ) % 2796203L;
-    return rand->seed % (max - min + 1L) + min;
+    rand->curr = (rand->curr * 125L ) % 2796203L;
+	rand->iter = rand->iter + 1;
+    return rand->curr % (max - min + 1L) + min;
 }
 
 int rand64_rand(rand64_t* rand, long long max)
