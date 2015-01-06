@@ -2,7 +2,7 @@
 #define rand32_h
 
 #include <math.h>
-#include <time.h>
+#include <stdlib.h>
 
 struct rand32_t {
     int seed;

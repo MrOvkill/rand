@@ -12,7 +12,7 @@ rand32_t rand32_init(int seed)
 int rand32_range(rand32_t* rand, int min, int max)
 {
     rand->curr = (rand->curr * 125 ) % 2796203;
-	rand->iter = rand->iter + 1;
+    rand->iter = rand->iter + 1;
     return rand->curr % (max - min + 1) + min;
 }
 

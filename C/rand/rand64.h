@@ -2,7 +2,7 @@
 #define rand64_h
 
 #include <math.h>
-#include <time.h>
+#include <stdlib.h>
 
 struct rand64_t {
     long long seed;
