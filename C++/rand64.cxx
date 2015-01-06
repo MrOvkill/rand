@@ -2,7 +2,7 @@
 
 Rand::Rand64::Rand64(long long Seed)
 {
-	this->Seed = ((long long)std::abs(Seed)) % 9999999L + 1L;
+	this->Seed = ((long long)fabs((long long)Seed)) % 9999999L + 1L;
 	this->Current = this->Seed;
 	this->Iterator = 0L;
 }

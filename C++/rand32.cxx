@@ -1,8 +1,10 @@
 #include "rand/rand32.hpp"
 
+
+
 Rand::Rand32::Rand32(int Seed)
 {
-	this->Seed = ((int)std::abs(Seed)) % 9999999 + 1;
+	this->Seed = ((int)fabs((int)Seed)) % 9999999 + 1;
 	this->Current = this->Seed;
 	this->Iterator = 0;
 }
